@@ -1,65 +1,68 @@
-# Projet 7 — Implémentez un système de scoring
+# Project 7 — Implement a Credit Scoring System
 
-## 📋 Présentation du projet
+[🇫🇷 Version française](README_FR.md)
 
-Ce dépôt fait partie du **Projet 7 de la formation Data Scientist en alternance d'OpenClassrooms**.
 
-**« Prêt à dépenser »** est une société financière qui propose des crédits à la consommation à des personnes ayant **peu ou pas d'historique de crédit**.
+## 📋 Project Overview
 
-Dans le cadre de ce projet, un modèle de Machine Learning a été développé afin d'estimer le **risque de défaut d'un client** et d'aider à la décision d'accorder ou non un crédit.
+This repository is part of **Project 7 of the OpenClassrooms Data Scientist apprenticeship program**.
 
-Ce dépôt contient le code du **dashboard interactif** permettant de visualiser les résultats du modèle de scoring.
+**"Prêt à dépenser"** is a financial company that provides consumer loans to people with **little or no credit history**.
 
----
+As part of this project, a Machine Learning model was developed to estimate a client's **risk of default** and help determine whether a loan application should be approved or rejected.
 
-## 🎯 Objectif du dashboard
-
-Le dashboard a pour objectif de rendre les résultats du modèle de scoring **compréhensibles et accessibles à l'utilisateur**.
-
-Il permet notamment de :
-
-- sélectionner un client ;
-- afficher la décision associée à sa demande de crédit ;
-- visualiser son **score de crédit** et sa **probabilité de défaut** ;
-- comparer les caractéristiques du client avec celles d'autres clients ;
-- visualiser les principales variables ayant influencé la prédiction du modèle ;
-- faciliter l'interprétation de la décision prise par le modèle.
+This repository contains the code for the **interactive dashboard** used to visualize the results of the credit scoring model.
 
 ---
 
-## 🖥️ Fonctionnement
+## 🎯 Dashboard Objective
 
-Le dashboard communique avec une **API de prédiction** développée avec Flask.
+The dashboard aims to make the credit scoring model's results **clear and accessible to users**.
 
-Le fonctionnement général de l'application est le suivant :
+It allows users to:
+
+- select a client;
+- display the decision associated with the client's loan application;
+- visualize the client's **credit score** and **probability of default**;
+- compare the client's characteristics with those of other clients;
+- visualize the main features that influenced the model's prediction;
+- facilitate the interpretation of the model's decision.
+
+---
+
+## 🖥️ How It Works
+
+The dashboard communicates with a **prediction API** developed with Flask.
+
+The general workflow of the application is as follows:
 
 ```text
-Utilisateur
+User
     ↓
 Dashboard
     ↓
-API Flask
+Flask API
     ↓
-Modèle de Machine Learning
+Machine Learning Model
     ↓
-Prédiction du risque de défaut
+Default Risk Prediction
     ↓
-Affichage et interprétation des résultats
+Results Visualization and Interpretation
 ```
 
 ---
 
 ## 🔗 API
 
-Le dashboard utilise l'API de scoring disponible à l'adresse suivante :
+The dashboard uses the credit scoring API available at:
 
 [https://flask-api-predict.onrender.com/](https://flask-api-predict.onrender.com/)
 
-L'API permet au dashboard d'interroger le modèle de Machine Learning afin de récupérer les prédictions associées aux clients.
+The API allows the dashboard to query the Machine Learning model and retrieve predictions for individual clients.
 
 ---
 
-## 🛠️ Technologies utilisées
+## 🛠️ Technologies Used
 
 - Python
 - Streamlit
@@ -73,7 +76,7 @@ L'API permet au dashboard d'interroger le modèle de Machine Learning afin de r�
 
 ---
 
-## 📁 Structure du projet
+## 📁 Project Structure
 
 ```text
 .
@@ -84,38 +87,36 @@ L'API permet au dashboard d'interroger le modèle de Machine Learning afin de r�
 └── ...
 ```
 
-> La structure peut varier selon la version actuelle du projet.
+> The project structure may vary depending on the current version of the application.
 
 ---
 
+## 📊 Results Interpretation
 
-``
+The dashboard presents the model's results visually to make them easier to understand.
 
-## 📊 Interprétation des résultats
+For each client, users can view:
 
-Le dashboard présente les résultats du modèle de manière visuelle afin de faciliter leur compréhension.
+- the **probability of default** predicted by the model;
+- the **loan approved / loan rejected** decision;
+- the main features that contributed to the model's decision.
 
-Pour chaque client, il permet d'observer :
-
-- la **probabilité de défaut** prédite par le modèle ;
-- la décision **crédit accordé / crédit refusé** ;
-- les principales caractéristiques ayant contribué à la décision du modèle.
-
-L'objectif est de rendre le fonctionnement du modèle de scoring plus **transparent et interprétable**.
+The goal is to make the credit scoring model more **transparent and interpretable**.
 
 ---
 
-## 🚀 Déploiement
+## 🚀 Deployment
 
-Le dashboard peut être déployé en ligne afin de permettre son utilisation sans installation locale.
+The dashboard is deployed online and can be used without any local installation.
 
-Lien vers le dashboard :
+Dashboard:
 
-[Accéder au dashboard](https://appapp-hwkmzph88qbzs2tf7nfhnh.streamlit.app/)
+[Access the dashboard](https://appapp-hwkmzph88qbzs2tf7nfhnh.streamlit.app/)
+
 ---
 
-## 👨‍💻 Auteur Guillaume Vechambre
+## 👨‍💻 Author
 
-Projet réalisé dans le cadre de la formation **Data Scientist d'OpenClassrooms**.
+**Guillaume Vechambre**
 
-
+Project developed as part of the **OpenClassrooms Data Scientist program**.
