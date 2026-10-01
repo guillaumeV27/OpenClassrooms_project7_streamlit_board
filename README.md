@@ -1,4 +1,4 @@
-# Projet 7 — Dashboard de scoring crédit
+# Projet 7 — Implémentez un système de scoring
 
 ## 📋 Présentation du projet
 
