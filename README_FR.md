@@ -21,7 +21,6 @@ Il permet notamment de :
 - sélectionner un client ;
 - afficher la décision associée à sa demande de crédit ;
 - visualiser son **score de crédit** et sa **probabilité de défaut** ;
-- comparer les caractéristiques du client avec celles d'autres clients ;
 - visualiser les principales variables ayant influencé la prédiction du modèle ;
 - faciliter l'interprétation de la décision prise par le modèle.
 
