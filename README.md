@@ -88,50 +88,8 @@ L'API permet au dashboard d'interroger le modèle de Machine Learning afin de r�
 
 ---
 
-## ⚙️ Installation locale
 
-### 1. Cloner le dépôt
-
-```bash
-git clone <URL_DU_DEPOT>
-cd <NOM_DU_DEPOT>
-```
-
-### 2. Créer un environnement virtuel
-
-```bash
-python -m venv venv
-```
-
-### 3. Activer l'environnement virtuel
-
-Sous Windows :
-
-```bash
-venv\Scripts\activate
-```
-
-Sous Linux/macOS :
-
-```bash
-source venv/bin/activate
-```
-
-### 4. Installer les dépendances
-
-```bash
-pip install -r requirements.txt
-```
-
-### 5. Lancer le dashboard
-
-```bash
-streamlit run app.py
-```
-
-Le dashboard sera ensuite accessible depuis un navigateur web.
-
----
+``
 
 ## 📊 Interprétation des résultats
 
@@ -141,7 +99,6 @@ Pour chaque client, il permet d'observer :
 
 - la **probabilité de défaut** prédite par le modèle ;
 - la décision **crédit accordé / crédit refusé** ;
-- le positionnement du client par rapport aux autres clients ;
 - les principales caractéristiques ayant contribué à la décision du modèle.
 
 L'objectif est de rendre le fonctionnement du modèle de scoring plus **transparent et interprétable**.
