@@ -1,24 +1,164 @@
-# Projet 7 — Implémentez un système de scoring
+# Projet 7 — Dashboard de scoring crédit
 
+## 📋 Présentation du projet
 
 Ce dépôt fait partie du **Projet 7 de la formation Data Scientist en alternance d'OpenClassrooms**.
 
-## Contexte du projet
-
 **« Prêt à dépenser »** est une société financière qui propose des crédits à la consommation à des personnes ayant **peu ou pas d'historique de crédit**.
 
-L'entreprise souhaite mettre en place un outil de **scoring crédit** permettant :
+Dans le cadre de ce projet, un modèle de Machine Learning a été développé afin d'estimer le **risque de défaut d'un client** et d'aider à la décision d'accorder ou non un crédit.
 
-- d'estimer la probabilité qu'un client rembourse son crédit ;
-- d'évaluer le risque associé à une demande de prêt ;
-- de classifier automatiquement une demande en **crédit accordé** ou **crédit refusé**.
+Ce dépôt contient le code du **dashboard interactif** permettant de visualiser les résultats du modèle de scoring.
 
-## Objectif de ce dépôt
+---
 
-Ce dépôt contient le code générant le dashboard
+## 🎯 Objectif du dashboard
 
-## Dashboard
+Le dashboard a pour objectif de rendre les résultats du modèle de scoring **compréhensibles et accessibles à l'utilisateur**.
 
-Le dashboard déployé est accessible à l'adresse suivante :
+Il permet notamment de :
+
+- sélectionner un client ;
+- afficher la décision associée à sa demande de crédit ;
+- visualiser son **score de crédit** et sa **probabilité de défaut** ;
+- comparer les caractéristiques du client avec celles d'autres clients ;
+- visualiser les principales variables ayant influencé la prédiction du modèle ;
+- faciliter l'interprétation de la décision prise par le modèle.
+
+---
+
+## 🖥️ Fonctionnement
+
+Le dashboard communique avec une **API de prédiction** développée avec Flask.
+
+Le fonctionnement général de l'application est le suivant :
+
+```text
+Utilisateur
+    ↓
+Dashboard
+    ↓
+API Flask
+    ↓
+Modèle de Machine Learning
+    ↓
+Prédiction du risque de défaut
+    ↓
+Affichage et interprétation des résultats
+```
+
+---
+
+## 🔗 API
+
+Le dashboard utilise l'API de scoring disponible à l'adresse suivante :
+
+[https://flask-api-predict.onrender.com/](https://flask-api-predict.onrender.com/)
+
+L'API permet au dashboard d'interroger le modèle de Machine Learning afin de récupérer les prédictions associées aux clients.
+
+---
+
+## 🛠️ Technologies utilisées
+
+- Python
+- Streamlit
+- Pandas
+- NumPy
+- Matplotlib / Seaborn
+- Plotly
+- Requests
+- Flask API
+- Git / GitHub
+
+---
+
+## 📁 Structure du projet
+
+```text
+.
+├── app.py
+├── requirements.txt
+├── data/
+├── README.md
+└── ...
+```
+
+> La structure peut varier selon la version actuelle du projet.
+
+---
+
+## ⚙️ Installation locale
+
+### 1. Cloner le dépôt
+
+```bash
+git clone <URL_DU_DEPOT>
+cd <NOM_DU_DEPOT>
+```
+
+### 2. Créer un environnement virtuel
+
+```bash
+python -m venv venv
+```
+
+### 3. Activer l'environnement virtuel
+
+Sous Windows :
+
+```bash
+venv\Scripts\activate
+```
+
+Sous Linux/macOS :
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Installer les dépendances
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Lancer le dashboard
+
+```bash
+streamlit run app.py
+```
+
+Le dashboard sera ensuite accessible depuis un navigateur web.
+
+---
+
+## 📊 Interprétation des résultats
+
+Le dashboard présente les résultats du modèle de manière visuelle afin de faciliter leur compréhension.
+
+Pour chaque client, il permet d'observer :
+
+- la **probabilité de défaut** prédite par le modèle ;
+- la décision **crédit accordé / crédit refusé** ;
+- le positionnement du client par rapport aux autres clients ;
+- les principales caractéristiques ayant contribué à la décision du modèle.
+
+L'objectif est de rendre le fonctionnement du modèle de scoring plus **transparent et interprétable**.
+
+---
+
+## 🚀 Déploiement
+
+Le dashboard peut être déployé en ligne afin de permettre son utilisation sans installation locale.
+
+Lien vers le dashboard :
 
 [Accéder au dashboard](https://appapp-hwkmzph88qbzs2tf7nfhnh.streamlit.app/)
+---
+
+## 👨‍💻 Auteur Guillaume Vechambre
+
+Projet réalisé dans le cadre de la formation **Data Scientist d'OpenClassrooms**.
+
+
